@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 //    private val authentication = Authentication(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //authentication.initUserState()
+//        authentication.initUserState()
         setContentView(R.layout.activity_main)
 //        authentication.signUpWithPhone("7000897944")
 //        observer()
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 //                }
 //                is AuthState.SendOTP -> {
 //                    findViewById<ProgressBar>(R.id.progress_bar).visibility = View.GONE
-//                    Toast.makeText(this, "Please Enter Otp", Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this, "Please Enter Otp: ${it.otp}", Toast.LENGTH_LONG).show()
 //                }
 //                is AuthState.OTPVerified -> {
 //                    Toast.makeText(this, "User Created with ${it.user.userId}, ${it.user.apiKey}", Toast.LENGTH_LONG).show()

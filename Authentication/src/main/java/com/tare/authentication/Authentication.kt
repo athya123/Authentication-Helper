@@ -74,7 +74,7 @@ class Authentication(private val context: Context) {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 if (it.status == "success") {
-                    _state.postValue(AuthState.SendOTP)
+                    _state.postValue(AuthState.SendOTP(it.otp))
                     uApi = it.apikey
                     otp = it.otp
                 } else {
