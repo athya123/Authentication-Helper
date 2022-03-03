@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk 31
@@ -52,6 +53,8 @@ dependencies {
     // datastore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.datastore:datastore-preferences-rxjava3:1.0.0")
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 afterEvaluate {
@@ -66,4 +69,7 @@ afterEvaluate {
             }
         }
     }
+}
+repositories {
+    mavenCentral()
 }

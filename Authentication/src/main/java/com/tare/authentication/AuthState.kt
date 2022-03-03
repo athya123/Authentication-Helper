@@ -9,5 +9,6 @@ sealed class AuthState{
     data class SendOTP(val otp: String): AuthState()
     data class OTPVerified(val user: User): AuthState()
     data class UserLoggedIn(val user: User): AuthState()
+    object OTPResend: AuthState()
     object UserLoginFirstTime: AuthState()
 }

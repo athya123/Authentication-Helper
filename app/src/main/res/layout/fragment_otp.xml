@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <include
+            layout="@layout/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_bold"
+                android:text="Enter OTP"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+
+            <com.broooapps.otpedittext2.OtpEditText
+                android:id="@+id/otpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/manrope_extrabold"
+                android:maxLength="4"
+                android:textSize="@dimen/_17ssp"
+                app:oev_box_style="@string/style_square"
+                app:oev_primary_color="@color/light_gray"
+                app:oev_secondary_color="@color/light_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resendTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
+            android:text="@string/not_receive"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resendTV">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BT_sendOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:visibility="invisible"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/bg_button"
+                android:text="Resend OTP"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/countDownTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/manrope_bold"
+                android:text="59 s"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:text="@string/loginText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

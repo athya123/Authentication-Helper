@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LoginApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loginText">
+        By logging in you agree to our <a href="https://www.google.com">Terms</a> and <a href="https://www.google.com">Policy</a>
+    </string>
+    <string name="style_square">square_box</string>
+    <string name="not_receive">Not Received OTP Yet?</string>
+    <string name="seconds">%s S</string>
 </resources>
